@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, sans-serif;
+}
+
+body{
+    background-color: #c7beb5;
+
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 920px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 350px;
+    justify-content: start;
+}
+
+.card {
+    margin: 0 10px;
+    align-items: flex-end;
+    width: 80px;
+    border-radius: .80rem;
+    border-radius: 2.2rem;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    transition: .6s cubic-bezier(.42,.97,.52,1.49);
+    box-shadow: 3px 17px 30px -7px rgba(66, 68, 90, 1);
+
+}
+
+.card > .line {
+    display: flex;
+    color: white;
+    flex-wrap: nowrap;
+}
+
+.card > .line > .place {
+    display: flex;
+    margin: 15px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(50, 50, 66);
+    color: white;
+    border-radius: 40%;
+}
+
+.card > .line > .description {
+    display: flex;
+    height: 90px;
+    width: 530px;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(25px);
+    transition-delay: .4s;
+    transition: all .4s ease;
+}
+
+.description p {
+    color: #b2bfb8;
+    padding-top: 6px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 550px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Uploading Photos */
+
+.card[for="card1"] {
+    background-image: url('images/cat.jpg');
+}
+.card[for="card2"] {
+    background-image: url('images/lion.jpg');
+}
+.card[for="card3"] {
+    background-image: url('images/puma.jpg');
+}
+.card[for="card4"] {
+    background-image: url('images/cheetach.jpg');
+}
